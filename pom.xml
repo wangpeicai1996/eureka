@@ -18,6 +18,7 @@
 
     <properties>
         <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
+        <jdk.version>1.8</jdk.version>
     </properties>
 
     <parent>
