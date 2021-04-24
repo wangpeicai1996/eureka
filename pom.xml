@@ -11,6 +11,7 @@
     <modules>
         <module>server01</module>
         <module>server02</module>
+        <module>product-provider</module>
     </modules>
 
     <properties>
