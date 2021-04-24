@@ -1,8 +1,8 @@
-package service.impl;
+package org.example.service.impl;
 
+import org.example.service.ProductService;
 import org.springframework.stereotype.Service;
-import pojo.Product;
-import service.ProductService;
+import org.example.pojo.Product;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

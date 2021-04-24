@@ -1,6 +1,6 @@
-package service;
+package org.example.service;
 
-import pojo.Product;
+import org.example.pojo.Product;
 
 import java.util.List;
 
