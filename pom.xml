@@ -12,6 +12,8 @@
         <module>server01</module>
         <module>server02</module>
         <module>product-provider</module>
+        <module>order-consumer</module>
+        <module>pojo-service</module>
     </modules>
 
     <properties>
