@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class Product implements Serializable {
+    public Product(){}
     public Product(Integer id, String productName, Integer productNum, BigDecimal prise) {
         this.id = id;
         this.productName = productName;
