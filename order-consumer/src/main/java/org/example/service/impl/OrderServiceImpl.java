@@ -43,10 +43,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
-     * 1.DiscoveryClient：通过获取袁术句获取服务注册信息
+     * 1.DiscoveryClient：通过获取元数据获取服务注册信息
      * @return
      */
-    public List<Product> getProductList(){
+  /*  public List<Product> getProductList(){
         //去服务中心获取所有的服务列表
         List<String> serviceIds = discoveryClient.getServices();
         if (CollectionUtils.isEmpty(serviceIds)) {
@@ -64,13 +64,13 @@ public class OrderServiceImpl implements OrderService {
         //发送请求
         ResponseEntity<List<Product>> response = restTemplate.exchange(sb.toString(), HttpMethod.GET, null, new ParameterizedTypeReference<List<Product>>() {});
         return response.getBody();
-    }
+    }*/
 
     /**
      *  2.LoadBalancerClient:Ribbon的负载均衡器调用
      * @return
      */
- /*   public List<Product> getProductList(){
+/*    public List<Product> getProductList(){
         //根据服务名称获取服务注册信息
         ServiceInstance serviceInstance = loadBalancerClient.choose("product-service");
         if (serviceInstance == null) {
@@ -86,12 +86,13 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      * 3.@LoadBalanced:通过注解开启Ribbon的负载均衡器
+     * 需要在启动类的RestTemplate注入的时候加上@LoadBalanced负载均衡注解，上面两种方式加这个注解反而会引发报错
      * @return
      */
-    /*public List<Product> getProductList(){
+    public List<Product> getProductList(){
         //直接指定服务名，发送请求
         ResponseEntity<List<Product>> response = restTemplate.exchange("http://product-service/product/list", HttpMethod.GET, null, new ParameterizedTypeReference<List<Product>>() {});
         return response.getBody();
-    }*/
+    }
 
 }
